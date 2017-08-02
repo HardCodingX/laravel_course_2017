@@ -18,3 +18,4 @@
 Route::get('/', 'HomeController@index');
 Route::get('/result', 'HomeController@result');
 Route::get('/visitas', 'HomeController@visitas');
+Route::get('/visitas/limpia', 'HomeController@limpia');
