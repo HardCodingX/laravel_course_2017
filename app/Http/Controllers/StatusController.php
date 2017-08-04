@@ -8,7 +8,7 @@ use Response;
 class StatusController extends Controller {
 
     public function ok() {
-      return Response('All OK', 200)->header('Content-Type', 'text/plain');
+      return Response('All OK', 200)->header('Content-Type', 'text/html');
     }
 
     public function notFound() {

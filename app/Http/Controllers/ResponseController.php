@@ -15,7 +15,7 @@ class ResponseController extends Controller {
   public function json() {
     return response()->json([
       'name' => 'Paco',
-      'age' => 25
+      'age' => [1, 2, 4]
     ], 404);
   }
 }

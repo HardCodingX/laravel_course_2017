@@ -27,9 +27,10 @@ Route::get('/status/500', 'StatusController@bigProblem');
 
 Route::get('/redirect', 'ResponseController@redirect');
 Route::get('/toAction', 'ResponseController@toAction');
+Route::get('/json', 'ResponseController@json');
 
 Route::get('/ages/{age}', 'MiddlesController@ages')
   ->middleware('CheckAge');
-  
-Route::get('/userData/{age}', 'MiddlesController@userData')
+
+Route::get('/userData/{name}', 'MiddlesController@userData')
   ->middleware('AfterMiddle');
