@@ -32,5 +32,11 @@ Route::get('/json', 'ResponseController@json');
 Route::get('/ages/{age}', 'MiddlesController@ages')
   ->middleware('CheckAge');
 
-Route::get('/userData/{name}', 'MiddlesController@userData')
-  ->middleware('AfterMiddle');
+Route::get('/userData/{name}', 'MiddlesController@userData')->middleware('AfterMiddle');
+
+Route::get('/users', 'usuariosController@index');
+Route::get('/users/add', 'usuariosController@add');
+Route::post('/users/save', 'usuariosController@save');
+Route::get('/users/{id}', 'usuariosController@edit');
+Route::post('/users/{id}', 'usuariosController@update');
+Route::get('/users/{id}/delete', 'usuariosController@delete');
