@@ -40,3 +40,8 @@ Route::post('/users/save', 'usuariosController@save');
 Route::get('/users/{id}', 'usuariosController@edit');
 Route::post('/users/{id}', 'usuariosController@update');
 Route::get('/users/{id}/delete', 'usuariosController@delete');
+
+Route::get('/login', 'LoginController@login');
+Route::post('/login', 'LoginController@makeLogin');
+Route::get('/admin', 'LoginController@admin');
+Route::get('/close', 'LoginController@close');
